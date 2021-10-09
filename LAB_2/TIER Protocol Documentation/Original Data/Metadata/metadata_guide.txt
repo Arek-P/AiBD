@@ -1,0 +1,40 @@
+Oryginalne dane:
+  Plik tb.csv zawiera dane o liczbie zachorowań na gruźlice, w poszczególnych krajach w konkretnych latach, z podziałem
+  na wiek i płeć. Nazwy kolumn nie są czytelnie opisane, ponadto niektóre kolumny zawierają więcej niż jedną zmienną.
+
+Proces modyfikacji:
+  - Zmieniono nazwę kolumny iso2 na country, ponieważ takie nazewnictwo jest bardziej zrozumiałe.
+
+  - Usunięto kolumnę new_sp, w której znajdowała się suma wszystkich zachorowań odnotowanych w danym roku.
+    Celem analizy jest przedstawienie liczby zachorowań z podziałem na płeć i wiek, dlatego powyższe zaciemniało by analizę.
+
+  - Usunięto również kolumny new_sp_mu oraz new_sp_fu, ponieważ nie udało się jednoznacznie ustalić co one oznaczały.
+
+  - Wykonano melting jako id użyto kraju i roku.
+
+  - Rozdzielono kolumne column na dwie, age oraz sex, a następnie usunięto nie potrzebną już kolumnę.
+
+  - Poprawiono formatowanie w kolumnie age, aby było czytelniejsze.
+
+  - Zmieniono kolejność kolumn, w celu ułatwienia w odczytywaniu istotnych informacji.
+
+  - Usunięto wszystkie wiersze w których znajdowała się warotść NaN (nie zawierały onie wszystkich potrzebnych informacji)
+
+  - Posortowano dane alfabetycznie dla nazw kraju i dodatkowo chronologicznie latami w obrębie danego kraju.
+
+  - Uporządkowane dane wyeksportowano do pliku final_results.csv, który znajduje się w folderze Analysis Data
+
+  - Wykonano wykresy ilości zachorowań z podziałem na poszczególne lata oraz grupy wiekowe. Na wykresach nie uwzględniono
+    grup wiekowych 0-4 oraz 5-14, ponieważ ilość tych przypadków jest już uwzględniona w przedziale 0-14, a ilość danych
+    w tych grupach wiekowych była znacznie wybrakowana w porównaniu do innych grup.
+    
+    Ilość zachorowań w poszczególnych latach rozbito na 2 wykresy, ponieważ ilość przypadków w latach 1980-1994 była 3 rzędy
+    wielkości mniejsza od ilości w latach następnych (spowodowane to jest brakiem danych o ilości zachorowań w tych latach).
+    Umieszczenie danych na jednym wykresie utrudniało by jego analizę.
+
+    Na podstawie wykresów można stwierdzić, że zachorowania na gruźlicę są częstsze u mężczyzn. Największy odsetek zachorowań
+    stanowią osoby w wieku 25-34, a najmniejszy w wieku 0-14.
+
+
+
+
