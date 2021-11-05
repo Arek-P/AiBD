@@ -27,7 +27,7 @@ def film_in_category(category:Union[int,str])->pd.DataFrame:
     Returns:
     pd.DataFrame: DataFrame zawierający wyniki zapytania
     '''
-
+    
     if type(category) == int:
         df = pd.read_sql("SELECT film.title, language.name languge, category.name category FROM film " +
                          "INNER JOIN film_category ON film.film_id = film_category.film_id " +
@@ -48,7 +48,6 @@ def film_in_category(category:Union[int,str])->pd.DataFrame:
 
     else:
         return None
-
     
 def film_in_category_case_insensitive(category:Union[int,str])->pd.DataFrame:
     ''' Funkcja zwracająca wynik zapytania do bazy o tytuł filmu, język, oraz kategorię dla zadanego:
@@ -68,7 +67,7 @@ def film_in_category_case_insensitive(category:Union[int,str])->pd.DataFrame:
     Returns:
     pd.DataFrame: DataFrame zawierający wyniki zapytania
     '''
-
+    
     if type(category) == int:
         df = pd.read_sql("SELECT film.title, language.name languge, category.name category FROM film " +
                          "INNER JOIN film_category ON film.film_id = film_category.film_id " +
@@ -89,8 +88,7 @@ def film_in_category_case_insensitive(category:Union[int,str])->pd.DataFrame:
 
     else:
         return None
-
-
+    
 def film_cast(title:str)->pd.DataFrame:
     ''' Funkcja zwracająca wynik zapytania do bazy o obsadę filmu o dokładnie zadanym tytule.
     Przykład wynikowej tabeli:
@@ -106,7 +104,7 @@ def film_cast(title:str)->pd.DataFrame:
     Returns:
     pd.DataFrame: DataFrame zawierający wyniki zapytania
     '''
-
+    
     if type(title) == str:
         df = pd.read_sql("SELECT actor.first_name, actor.last_name FROM film " +
                          "INNER JOIN film_actor ON film.film_id = film_actor.film_id " +
@@ -135,7 +133,7 @@ def film_title_case_insensitive(words:list) :
     Returns:
     pd.DataFrame: DataFrame zawierający wyniki zapytania
     '''
-
+    
     if type(words) == list:
         reg_ex = ''
         for word in words:
