@@ -1,0 +1,7 @@
+Wnioski po analizie danych:
+
+- Kobiety stanowią większość klientów. Odkurzacze są częściej kupowane przez kobiety.
+- Klienci niechętnie kupują produkty marki Beko, mimo iż pod wględem ocen nie ustępują innym markom.
+- Średnia ocen poniżej średniej wartości przedziału ocen. Większość klientów nie jest w pełni zadowolona z zakupu.
+- Aby wystarczająco przetestować działanie odkurzacza wystarczy tydzień.
+- Największą grupą wiekową kupującą odkurzacze, są osoby w wiekiu około 40 lat.

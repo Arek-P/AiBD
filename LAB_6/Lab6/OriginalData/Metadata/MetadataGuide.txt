@@ -1,0 +1,48 @@
+Plik "15_ZACHODNIOPOMORSKIE" zawiera wyniki oceny odkurzaczy w jednej z sieci sklepów z województwa zachodniopomorskiego
+oraz dane kupujących.
+
+Dane znajdują się w 6 kolumnach i 525 wierszach.
+
+Pierwsza (nienazwana) kolumna zawiera numer wiersza począwszy od 0. Można potraktować jako ID danego wpisu.
+
+Kolumna Dni od zakupu:
+Zawiera informacje o ilości dni, które upłynęły od momentu zakupu do wystawienia oceny.
+Wartość minimalna to 1, a maksymalna 16, średnia wynosi 7.
+
+Kolumna Marka:
+Zawiera nazwę marki odkurzacza (Tefal, Electrolux, Beko, Samsung, Dyson).
+
+Kolumna Wiek kupującego:
+Zawiera informację o wieku kupującego.
+Wartości wachają się od 18 do 76, ze średnią 40.
+Zawiera 58 niepodanych wartości.
+
+Kolumna Płeć kupującego: 
+Zawiera informację o płci kupującego (M, K).
+Zawiera 8 niepodanych wartości.
+
+Kolumna Ocena:
+Zawiera wartość oceny w skali 0-5, wystawionej przez kupującego.
+Średnia ocena wynosi 2.33.
+
+
+Modyfikacje danych:
+W pliku wykonywalnym PrepareData.ipynb znajdującym się w folderze CommandFiles obrobiono dane, 
+aby można je było wygodnie analizować.
+
+- Usunięto pierwszą kolumnę, która zawierała indeksy wierszy, ponieważ nic nie wnosiła do tego zestawu danych.
+- Zmieniono nazwy kolumn:
+	'Dni od zakupu' -> 'Elapsed_Days'
+	'Marka' -> 'Brand'
+	'Wiek kupującego' -> 'Age'
+	'Płeć kupującego' -> 'Sex'
+	'Ocena' -> 'Rating'
+
+- Zmieniono wartości "bd." w kolumnie Sex, w celu unifikacji oznaczeń wartosci braku danych.
+- Finalną wersje zapisano do pliku final_data w folderze AnalysisData
+
+Celowo pozostawiono w zestawie wiersze z niekompletnymi danymi, ponieważ w dalszej analizie wykorzystane zostaną 
+wibiórcze kolumny. Zatem usunięcie wszystkich wierszy z brakiem danych w którejś z kolumn zacznie uszczupliło by 
+zestaw danych i wpłynęło na poprawność analizy.
+
+ 
