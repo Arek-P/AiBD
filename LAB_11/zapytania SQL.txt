@@ -1,0 +1,11 @@
+1. SELECT COUNT(*) FROM "nyc_streets"
+
+2. SELECT COUNT(name) FROM "nyc_streets" WHERE name LIKE 'M%'
+
+3. SELECT SUM(popn_total) FROM "nyc_census_blocks" 
+
+4. SELECT * FROM "nyc_neighborhoods" 
+inner JOIN "nyc_census_blocks" 
+ON nyc_neighborhoods.geom = nyc_census_blocks.geom
+
+5. SELECT boroname, COUNT(*) FROM "nyc_neighborhoods" GROUP BY boroname
